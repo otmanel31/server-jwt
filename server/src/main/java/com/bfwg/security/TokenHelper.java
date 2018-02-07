@@ -77,7 +77,8 @@ public class TokenHelper {
         return claims;
     }
 
-    String generateToken(Map<String, Object> claims) {
+    // en jwt, les droits sont denoté claims
+    String generateToken(Map<String, Object> claims) { 
         return Jwts.builder()
                 .setClaims(claims)
                 .setExpiration(generateExpirationDate())
